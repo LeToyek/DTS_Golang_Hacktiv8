@@ -2,10 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
-	mySlice()
-}
-func mySlice() {
+func MySlice() {
 	fruits := []string{"Apple", "Banana", "Mango"}
 
 	secFruits := make([]string, 3)
@@ -23,21 +20,21 @@ func mySlice() {
 	fmt.Println(secFruits[3:5])
 
 }
-func arrays() {
+func Arrays() {
 	numbers := [4]int{1, 2, 3, 45}
 	balances := [2][3]int{{1, 2, 3}, {2, 3, 4}}
 
 	fmt.Print(numbers)
 	fmt.Print(balances)
 }
-func loops() {
+func Loops() {
 	for i := 0; i < 10; i++ {
 		if i%2 == 0 {
 			fmt.Print(i)
 		}
 	}
 }
-func conditions() {
+func Conditions() {
 	var currentYear = 2021
 
 	if age := currentYear - 2010; age < 17 {
