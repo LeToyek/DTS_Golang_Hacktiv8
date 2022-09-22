@@ -43,3 +43,34 @@ func Conditions() {
 		fmt.Print("Kamu sudah cukup umur")
 	}
 }
+
+type Int int
+
+func miniQuiz() {
+	var result = map[Int]int{}
+	a := []Int{1, 2, 2, 3, 4, 5, 5, 6}
+
+	for _, n := range a {
+		result[n]++
+	}
+	for key, v := range result {
+		fmt.Printf("Angka %d : duplikasi %d\n", key, v)
+	}
+}
+func miniQuiz2() {
+	str := []string{"cal", "cal", "cal", "man", "man", "ta", "ta", "ra", "ra", "ra"}
+	temp := map[string]int{}
+	var tampung []string
+	for _, v := range str {
+		temp[v]++
+	}
+	for key, value := range temp {
+		if value >= 3 {
+			tampung = append(tampung, key)
+		}
+	}
+	str2 := str
+	str2[0] = "toyek"
+	fmt.Print(str[0])
+	fmt.Println(tampung)
+}
