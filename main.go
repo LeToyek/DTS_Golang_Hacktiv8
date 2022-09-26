@@ -1,17 +1,29 @@
 package main
 
+import "fmt"
+
 func main() {
-	// greet("Toyek", "Melbourne,Australia")
-	// result := greet2("Hello", []string{"Jona", "Joni", "Jupri"})
-	// fmt.Println(result)
-	// luas, keliling := circle(8)
-	// fmt.Println("Luas = ", luas)
-	// fmt.Println("Keliling = ", keliling)
-	// studentList := GetStudents("johan", "bambang", "supriyanto", "cipto")
-	// for i, v := range studentList {
-	// 	temp := fmt.Sprintf("Student %d", i+1)
-	// 	fmt.Println(v[temp])
-	// }
-	miniQuiz()
-	miniQuiz2()
+	choice := 0
+	for 0 <= choice && choice < 3 {
+		showMenu()
+		fmt.Scanln(&choice)
+		switch choice {
+		case 1:
+			ShowAllStudents()
+			break
+		case 2:
+			fmt.Println("Silahkan isi id murid yang ingin dicari")
+			var search uint8
+			fmt.Scanln(&search)
+			FindStudent(search)
+			break
+		}
+	}
+}
+func showMenu() {
+	fmt.Println("=====================================")
+	fmt.Println("Silahkan pilih menu")
+	fmt.Println("1. Lihat seluruh data siswa")
+	fmt.Println("2. Cari data siswa berdasarkan ID")
+	fmt.Println("3. Keluar")
 }
